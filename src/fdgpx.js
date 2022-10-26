@@ -19,7 +19,6 @@ function parseGpxFile(xmlString) {
     var mtime = Date.parse(trackpoints[0].time);
     var lasttime = mtime
     var clatlng = new google.maps.LatLng(lat, lon);
-
     var firsttime = mtime;
     
     pts.push(clatlng);
@@ -27,7 +26,7 @@ function parseGpxFile(xmlString) {
     for (let i=0;i< trackpoints.length; i++){
        
         mtime = Date.parse(trackpoints[i].time);
-        if (mtime - lasttime < 1000*300) {
+        if (mtime - lasttime < 1000*60) {
             continue;
         }
         lon = parseFloat(trackpoints[i]['@_lon']);
@@ -83,8 +82,7 @@ function getBoundsForArray(a)
 			minlng = lng;
 		}
 	}
-	
-	bounds = new google.maps.LatLngBounds(new google.maps.LatLng(minlat, minlng), 
+	bounds = new google.maps.LatLngBounds(new google.maps.LatLng(minlat, minlng),
 										  new google.maps.LatLng(maxlat, maxlng));	
 	
 	return bounds;
@@ -107,7 +105,6 @@ function mapSetPoly(map, path) {
 	};
 	map.setCenter(centerOfMap);
 	map.fitBounds(mapBounds);
-
 	poly = new google.maps.Polyline(polyOptions);
 	poly.setPath(path);
 	poly.setVisible(true);
