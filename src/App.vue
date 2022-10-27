@@ -125,9 +125,6 @@ function filteryears() {
 
 </script>
 
-<style>
-</style>
-
 <template>
     <div class="h1 text-center text-danger">Show My Flights</div>
     <div>
