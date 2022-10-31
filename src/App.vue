@@ -30,7 +30,7 @@ onMounted(async () => {
     map.value = new google.maps.Map(mapDiv.value, {
         center: edfmCoords,
         gestureHandling: "greedy",
-        zoom: 5,
+        zoom: 2,
         zoomControl: true,
         zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_CENTER,
