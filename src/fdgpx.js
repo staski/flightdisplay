@@ -1,5 +1,4 @@
 import fastXmlParser from 'fast-xml-parser'
-//import { Loader } from 'google-maps';
 export { parseGpxFile, mapSetPoly }
 
 function parseGpxFile(xmlString) {
