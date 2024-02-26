@@ -5,10 +5,9 @@ import FileUpload from './fileUpload.vue'
 import {parseGpxFile, mapSetPoly } from './fdgpx'
 import { Loader } from 'google-maps';
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { GOOGLE_MAPS_API_KEY } from './mapsapikey';
 const props = defineProps(['width', 'height', 'title']);
 const mapDiv = ref(null)
-const GOOGLE_MAPS_API_KEY = 'AIzaSyBYb80Mm61u6J8Cjtt82nJQ0H2AW4zp03g'
 const goptions = {'libraries': ["geometry", "drawing"]}
 const edfmCoords = { lat: 49.473057, lng: 8.514167}
 const loader = new Loader(GOOGLE_MAPS_API_KEY, goptions)
