@@ -6,6 +6,7 @@ import {parseGpxFile, mapSetPoly } from './fdgpx'
 import { Loader } from 'google-maps';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { GOOGLE_MAPS_API_KEY } from './mapsapikey';
+
 const props = defineProps(['width', 'height', 'title']);
 const mapDiv = ref(null)
 const goptions = {'libraries': ["geometry", "drawing"]}
@@ -125,12 +126,6 @@ function filteryears() {
 </script>
 
 <style scoped>
-.flight-display {
-    width: 100%;
-    height: v-bind(props.height);
-    margin: 10px;
-}
-
 .gmap {
     width: 100%;
     height: 75%;
@@ -151,7 +146,7 @@ input + label {
 </style>
 <template>
     <div class="flight-display">
-        <div class="h1 text-center text-danger">{{ props.title }}</div>
+        <div class="h3 text-center text-danger">{{ props.title }}</div>
         <div class="fileUploadContainer">
             <FileUpload @file-input="fileInput"/>
         </div>

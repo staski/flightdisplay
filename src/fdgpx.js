@@ -17,6 +17,7 @@ function parseGpxFile(xmlString) {
     var lat = parseFloat(trackpoints[0]['@_lat']);
     var mtime = Date.parse(trackpoints[0].time);
     var lasttime = mtime
+    // eslint-disable-next-line no-undef
     var clatlng = new google.maps.LatLng(lat, lon);
     var firsttime = mtime;
     
@@ -31,6 +32,7 @@ function parseGpxFile(xmlString) {
         lon = parseFloat(trackpoints[i]['@_lon']);
         lat = parseFloat(trackpoints[i]['@_lat']);
 
+        // eslint-disable-next-line no-undef
         clatlng = new google.maps.LatLng(lat, lon);
         
         //console.log(clatlng.lat(), clatlng.lng(), time, trackpoints[i]['@_lat'], lat)
@@ -39,7 +41,8 @@ function parseGpxFile(xmlString) {
     }
     lon = parseFloat(trackpoints[trackpoints.length-1]['@_lon']);
     lat = parseFloat(trackpoints[trackpoints.length-1]['@_lat']);
-    var clatlng = new google.maps.LatLng(lat, lon);
+    // eslint-disable-next-line no-undef
+    clatlng = new google.maps.LatLng(lat, lon);
 
     pts.push(clatlng);
     
@@ -81,7 +84,9 @@ function getBoundsForArray(a)
 			minlng = lng;
 		}
 	}
+	// eslint-disable-next-line no-undef
 	bounds = new google.maps.LatLngBounds(new google.maps.LatLng(minlat, minlng),
+										  // eslint-disable-next-line no-undef
 										  new google.maps.LatLng(maxlat, maxlng));	
 	
 	return bounds;
@@ -104,6 +109,7 @@ function mapSetPoly(map, path) {
 	};
 	map.setCenter(centerOfMap);
 	map.fitBounds(mapBounds);
+	// eslint-disable-next-line no-undef
 	poly = new google.maps.Polyline(polyOptions);
 	poly.setPath(path);
 	poly.setVisible(true);

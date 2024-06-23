@@ -1,6 +1,6 @@
 <!-- eslint-disable no-undef -->
 <script setup>
-//import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import FlightDisplay from './flightDisplay.vue';
 </script>
@@ -9,18 +9,39 @@ import FlightDisplay from './flightDisplay.vue';
 .my-flight-display {
   margin: 10px;
   padding: 10px;
+  width: 50%;
+  height: 70vh;
 }
-
 </style>
 
 <template>
-  <div class="my-flight-display container-fluid">
-    <div class="row">
-    <div class="col-10">
-    <FlightDisplay width="100%" height="100vh" title="Show my Flights"></FlightDisplay>
-    </div>
-    <div class="col">Test</div>
+  <div style="margin: 10px; padding: 10px; width: 50%" class="border border-danger">
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
+    this is a test  text before 
   </div>
+  <FlightDisplay title="Show my Flights" class="my-flight-display border border-danger"></FlightDisplay>
+  <div style="margin: 10px; padding: 10px" class="border border-danger">
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
+    this is a test text after
   </div>
 </template>
 
