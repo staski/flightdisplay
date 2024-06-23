@@ -1,14 +1,6 @@
 # flight-display
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+flight-display is a Vue component to display any number of flight tracks in one google-maps map. The tracks can be filtered by year of flight. This component can be useful for creating an overview where you have been in what year. A demo can be seen here: 
 
 ## Project Setup
 
