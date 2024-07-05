@@ -18,10 +18,10 @@ import FlightDisplay from './flightDisplay.vue';
 }
 
 .main {
-  padding: 20px;
+  padding: 10px;
   color: floralwhite;
   font-family: Tahoma, "Trebuchet MS", sans-serif;
-  font-size: 24px;
+  font-size: 1.2em;
 }
 
 
@@ -51,17 +51,17 @@ h1 {
     <h1>SHOW MY FLIGTHS</h1>
     The flight-display app lets you display any number of your flight-tracks in a Google Map. Choose the tracks (as gpx-files) from your local storage. 
     A filter lets you select or deselect all flights of a particular year dynamically. 
-    <p/>
+  </div>
+  <FlightDisplay  class="my-flight-display"></FlightDisplay>
+  <div class="main">
     This app runs locally in your browser, so your flight data will not be sent over the internet to any server. For each flight track, 
     the app creates a 'path', consisting of the track points at every minute of your flight. As the departure airport 
     of a flight typically is identical to the landing airport of the previous flight (if the flights are with the same plane and all flights are recorded), the app, for those 
     cases, joins both paths if they happen in the same year. This results in a set of paths which is sent the Google Maps service for rendering.
-  </div>
-  <FlightDisplay  class="my-flight-display"></FlightDisplay>
-  <div class="main">
-    The app is created as a <a href="https://vuejs.org"> Vue </a> component,  see the <a href=https://github.com/staski/flightdisplay>flight-display app on GitHub</a>
     <p/>
-    Other software tools on <a href="https://fly.venus-flytrap.de/diy">CP's aviation pages</a>
+    The app is created as a <a href="https://vuejs.org"> Vue </a> component,  see the <a href=https://github.com/staski/flightdisplay>flight-display app on GitHub</a>.
+    <p/>
+    Other software tools on <a href="https://fly.venus-flytrap.de/diy">CP's aviation pages</a>.
   </div>
 </div>
 </template>
